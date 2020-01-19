@@ -34,69 +34,25 @@
         </div>
     </div>
 
-    <section id="registracija">
+    <section id="login">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h1><b>REGISTRACIJA</b></h1>
+                    <h1><b>Logovanje</b></h1>
                     <br>
                     <hr>  
-                    <p class="lead">Registrujte se i postanite član VIP kluba!</p>
+                    <p class="lead">Uspesno ste se ulogovali!</p>
+                    <br> 
+                    <p>
+                        <a href="{{ url_for('index') }}">
+                        <button > Natrag na index</button>
+                        </a>
+                    </p>
                     <br>
                     <br>
                 </div>
             </div>
-            <div  class="row text-center">
-                <form action = '/registracija' method = 'POST' class="col-md-12" >
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="ime" placeholder="Ime *">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="prezime" placeholder="Prezime *">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Lozinka *">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" name="password2"  placeholder="Potvrdi lozinku *">
-                    </div>
-                    <div class="form-group">
-                        <div class="maxl">
-                            <label class="radio inline"> 
-                                <input type="radio" name="gender" value="musko" checked>
-                                <span>Muško </span> 
-                            </label>
-                            <label class="radio inline"> 
-                                <input type="radio" name="gender" value="zensko">
-                                <span>Žensko </span> 
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="usertype" value="korisnik" hidden>
-                        <input type="email" class="form-control" name="email" placeholder="Vaš mail *">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="broj" placeholder="Vaš kontakt broj *">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control">
-                            <option class="hidden"  selected disabled>Označite Vaše sigurnosno pitanje</option>
-                                <option>Kog dana ste rođeni?</option>
-                                <option>Vaš stari broj telefona?</option>
-                                <option>Ime ljubimca?</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="pitanje" placeholder="Vaš odgovor *">
-                    </div>
-                    <input type="submit" class="btn btn-dark btn-md" value="Potvrdi"/>
-                </div>
-            </form>
-            </div>
+            
         </div>    
     </section>
     <section id="footer" style="background-color: rgb(29, 29, 29);">

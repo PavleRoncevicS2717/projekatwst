@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MADE IN YUGOSLAVIA</title>
+    <title>Dodavanje ploce</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -34,68 +35,26 @@
         </div>
     </div>
 
-    <section id="registracija">
+    <section id="login">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h1><b>REGISTRACIJA</b></h1>
+                    <h1><b>Nove Ploce</b></h1>
                     <br>
                     <hr>  
-                    <p class="lead">Registrujte se i postanite član VIP kluba!</p>
+                    <p class="lead">Dodaj nove proizvode</p>
                     <br>
                     <br>
                 </div>
             </div>
-            <div  class="row text-center">
-                <form action = '/registracija' method = 'POST' class="col-md-12" >
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="ime" placeholder="Ime *">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="prezime" placeholder="Prezime *">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Lozinka *">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" name="password2"  placeholder="Potvrdi lozinku *">
-                    </div>
-                    <div class="form-group">
-                        <div class="maxl">
-                            <label class="radio inline"> 
-                                <input type="radio" name="gender" value="musko" checked>
-                                <span>Muško </span> 
-                            </label>
-                            <label class="radio inline"> 
-                                <input type="radio" name="gender" value="zensko">
-                                <span>Žensko </span> 
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="usertype" value="korisnik" hidden>
-                        <input type="email" class="form-control" name="email" placeholder="Vaš mail *">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="broj" placeholder="Vaš kontakt broj *">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control">
-                            <option class="hidden"  selected disabled>Označite Vaše sigurnosno pitanje</option>
-                                <option>Kog dana ste rođeni?</option>
-                                <option>Vaš stari broj telefona?</option>
-                                <option>Ime ljubimca?</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="pitanje" placeholder="Vaš odgovor *">
-                    </div>
-                    <input type="submit" class="btn btn-dark btn-md" value="Potvrdi"/>
-                </div>
-            </form>
+            <div class="row text-center">
+                <form action="/dodaj" method="post" enctype="multipart/form-data">
+                    <p>Naziv Ploce:  <input type="text" name="naziv"></p>
+                    <p>Cena ploce: <input type="number" name="cena"></p>
+                    <p>Slika <input type="file" name="slika" ></p>
+                    
+                    <p><input type="submit" name="Dodaj plocuu"></p>
+                </form>
             </div>
         </div>    
     </section>
